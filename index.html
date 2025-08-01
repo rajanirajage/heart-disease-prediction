@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heart Disease Predictor</title>
+</head>
+<body>
+    <h2>Heart Disease Prediction Form</h2>
+
+    <form method="post" action="/predict">
+        <label>BMI:</label><input name="BMI"><br>
+        <label>Smoking (0/1):</label><input name="Smoking"><br>
+        <label>AlcoholDrinking (0/1):</label><input name="AlcoholDrinking"><br>
+        <label>Stroke (0/1):</label><input name="Stroke"><br>
+        <label>PhysicalHealth:</label><input name="PhysicalHealth"><br>
+        <label>MentalHealth:</label><input name="MentalHealth"><br>
+        <label>DiffWalking (0/1):</label><input name="DiffWalking"><br>
+        <label>Sex:</label><input name="Sex"><br>
+        <label>AgeCategory:</label><input name="AgeCategory"><br>
+        <label>Race:</label><input name="Race"><br>
+        <label>Diabetic:</label><input name="Diabetic"><br>
+        <label>PhysicalActivity (0/1):</label><input name="PhysicalActivity"><br>
+        <label>GenHealth:</label><input name="GenHealth"><br>
+        <label>SleepTime:</label><input name="SleepTime"><br>
+        <label>Asthma (0/1):</label><input name="Asthma"><br>
+        <label>KidneyDisease (0/1):</label><input name="KidneyDisease"><br>
+        <label>SkinCancer (0/1):</label><input name="SkinCancer"><br>
+        <br>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
